@@ -89,3 +89,6 @@ public class arraylist {
 
     }
 }
+
+// in java array List is the dynamic array that is automatically shrink or
+// reduce at the time when the data is get entered
