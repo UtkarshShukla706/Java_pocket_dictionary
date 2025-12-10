@@ -7,7 +7,7 @@ public class arrayList2 {
         try {
             ArrayList<Integer> list = new ArrayList<>();
             int x1 = 0;
-            int x2 = 7;
+            int x2 = 5;
             list.addAll(Arrays.asList(2, 3, 9, 6, 5, 8));
             System.out.println("the original array List is :" + list);
             swap(list, x1, x2);
