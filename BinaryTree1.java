@@ -1,0 +1,56 @@
+public class BinaryTree1 {
+
+    // here i am going to create the binary tree for the insertion of the data in
+    // the trees
+
+    // Node is created for the binary tree
+
+    // in this program i am going to learn the structure of the binary tree that i
+    // have made
+
+    static class Node {
+        int data;
+        Node left;
+        Node right;
+
+        Node(int data) {
+            this.data = data;
+            this.left = null;
+            this.right = null;
+        }
+    }
+
+    // class for the callling of the binary tree
+
+    public static class BinaryTree {
+
+        static int index = -1;
+
+        public Node buildTree(int nodes[]) {
+            index++;
+            if (nodes[index] == -1) {
+                return null;
+            }
+
+            Node newNode = new Node(nodes[index]);
+            newNode.left = buildTree(nodes);
+            newNode.right = buildTree(nodes);
+
+            return newNode;
+
+        }
+
+    }
+
+    // main function for printing the top most element of the tree to see the
+    // program is currently working or not
+    public static void main(String[] args) {
+        int nodes[] = { 1, 2, 4, -1, -1, 5, -1, -1, 3, -1, 6, -1, -1 };
+
+        BinaryTree tree = new BinaryTree();
+        Node root = tree.buildTree(nodes);
+
+        System.out.println(root.data);
+    }
+
+}
